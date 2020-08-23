@@ -5,9 +5,11 @@
       <router-link to="/Cats">Cats</router-link> |
       <router-link to="/Dogs">Dogs</router-link> |
       <router-link to="/Pet">Pet</router-link>
-
     </div>
-    <router-view/>
+    <!-- 表の幅変更 -->
+    <b-container>
+        <router-view/>
+    </b-container>
   </div>
 </template>
 

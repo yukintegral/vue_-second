@@ -28,20 +28,20 @@ export default new Router({
     },
 
     {
-      path: '/Cats',
-      name: 'Cats',
+      path: '/cats',
+      name: 'cats',
       component: Cats
     },
 
     {
-      path: '/Dogs',
-      name: 'Dogs',
+      path: '/dogs',
+      name: 'dogs',
       component: Dogs
     },
 
     {
-      path: '/Pet',
-      name: 'Pet',
+      path: '/pet',
+      name: 'pet',
       component: Pet
     }
   ]
