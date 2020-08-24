@@ -3,12 +3,12 @@
     <h1>Cats for Adoption</h1>
     <!-- 現在バージョン -->
     <!-- <b-table striped hover :items="cats">
-      <template alot="name" slot-scope="data">
+      <template slot="name" slot-scope="data">
         router-link -->
 
-    <b-table striped hover :items="cats">
+  <b-table :fields="cats" :items="cats">
       <template v-slot:cell(name)="data">
-          <router-link :to="`/pets/${data.index}`">
+          <router-link :to="`/pets/cats/${data.index}`">
           {{ data.value }}
           </router-link>
         </template>
@@ -17,8 +17,6 @@
 </template>
 
 <script>
-// import catss from '@/data/cats'
-
 import { mapState } from 'vuex'
 
 export default {

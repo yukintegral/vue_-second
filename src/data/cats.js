@@ -36,7 +36,7 @@ export default [
     name: 'Kitkat',
     breed: 'bombay',
     species: 'cat',
-    gender: 'female',  
+    gender: 'female',
     age: .9,
     color: 'black',
     weight: 9,

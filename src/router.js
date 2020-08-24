@@ -16,9 +16,9 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',      // このパスにアクセスしたら
+      path: '/',
       name: 'home',
-      component: Home // このコンポーネントを呼ぶ
+      component: Home
     },
 
     {
@@ -40,7 +40,7 @@ export default new Router({
     },
 
     {
-      path: '/pets/id',
+      path: '/pets/:species/:id',
       name: 'pet',
       component: Pet
     }
