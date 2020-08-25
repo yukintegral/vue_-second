@@ -5,11 +5,10 @@
     <!-- <b-table striped hover :items="cats">
       <template slot="name" slot-scope="data">
         router-link -->
-
-  <b-table :fields="cats" :items="cats">
-      <template v-slot:cell(name)="data">
-          <router-link :to="`/pets/cats/${data.index}`">
-          {{ data.value }}
+      <b-table striped hover :items="pets">
+        <template v-slot:cell(name)="data">
+          <router-link :to="`/pets/${species}/${data.index}`">
+            {{ data.value }}
           </router-link>
         </template>
     </b-table>
@@ -23,11 +22,8 @@ export default {
   data() {
     return {}
   },
-
-  computed: {
-    ...mapState([
-      'cats'
-    ])
-  }
+  computed: mapState({
+    cats: state => state.cats
+  })
 }
 </script>
