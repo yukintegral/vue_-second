@@ -1,8 +1,8 @@
 <template>
   <div>
-  <h1>{{ animal.name }}{{ this.$route.params.species }}</h1>
-  <p>Age: {{ animal.age }} yeaers old</p>
-  <p>Breed: {{ animal.breed }}</p>
+    <h1>{{ animal.name}} ({{ $route.params.species  }})</h1>
+    <p>Age: {{ animal.age}} years old</p>
+    <p>Breed: {{ animal.breed}}</p>
   </div>
 </template>
 
@@ -22,11 +22,9 @@ export default {
       'dogs'
     ])
   },
-  methods: {
-    pet() {
-      const animal = this[this.$route.params.species][$route.params.id]
-      this.animal = animal
-    }
+  mounted() {
+    const animal = this[this.$route.params.species][$route.params.id]
+    this.animal = animal
   }
 }
 </script>
